@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Abuja</title>
+
+    <style>
+      body{
+        background: linear-gradient(to top, #4fb576 0%, #44c489 30%, #28a9ae 46%, #28a2b7 59%, #4c7788 71%, #6c4f63 86%, #432c39 100%);
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+      h1 {
+        text-align: center;
+        background: #4fb576;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 5px #432c39;
+      }
+      h2 {
+        text-align: center;
+        font-size: 20px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 1.5;
+
+      }
+      a {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #f70776;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #f70776;
+        color: aliceblue;
+        font-weight: thin;
+        padding: 20px 30px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .footer {
+        text-align: center;
+      }
+      .coder{
+        color: blueviolet;
+      }
+      .coder:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Abuja</h1> <hr>
+
+      <h2>A city in Nigeria</h2> 
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/045/871/original/Abuja_night_time.jpg?1662749653"
+        alt="Abuja"
+      />
+
+      <p>
+        Abuja is the capital city of Nigeria, in the middle of the country. The
+        skyline of the city, which was built largely in the 1980s, is dominated
+        by Aso Rock, an enormous monolith. It rises up behind the Presidential
+        Complex, which houses the residence and offices of the Nigerian
+        president in the Three Arms Zone on the eastern edge of the city. Nearby
+        are the National Assembly and the Supreme Court of Nigeria.
+        <br />
+        <a href="https://en.wikipedia.org/wiki/Abuja" target="_blank"
+          >find out more here!
+        </a>
+      </p>
+
+      <button>Visit Abuja Now ✈️</button>
+      <p class="footer"> <em>Website coded by <strong> <span class="coder">PROMISE OWA</span> 💻</p>
+    </div>
+    <script>
+      function visitAbuja() {
+        let name = prompt("what is your name?");
+        let age = prompt("how old are you?");
+        let email = prompt("what is your email address?");
+        let h1 = document.querySelector("h1");
+        if (age > 18) {
+          h1.innerHTML =
+            "😄<br />Hello " +
+            name +
+            "!  welcome to Abuja! We will send you an itinerary via your email! Eat some jollof rice 🍛 while you are here!";
+        } else {
+          h1.innerHTML =
+            "😎<br />Hello " +
+            name +
+            "!  welcome to Abuja! An itinerary has been sent to your email! Eat some puffpuff while you are here!";
+        }
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", visitAbuja);
+    </script>
+  </body>
+</html>
